@@ -92,7 +92,8 @@ const expendAliasRules = (rules) => {
  * }
  */
 const argumentsToConfig = (rules) => {
-    expendAliasRules(rules);
+    expendAliasRules(rules);// 将具有别名的参数展开放到列表中
+    // 从命令行中解析参数，并将参数放到对象中返回
     const config = commandArgumentsHandle(rules);
     // 将未传入的命令行参数的默认值填充到配置中
     Object.values(rules).forEach(r => {
